@@ -1,6 +1,6 @@
 {
   "name": "react-jsonschema-form-layout-3",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "react-jsonschema-form-layout React component",
   "main": "lib/index.js",
   "module": "es/index.js",

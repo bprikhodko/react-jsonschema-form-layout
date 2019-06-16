@@ -67,21 +67,25 @@ const schema = {
 }
 
 const fields = {
-  layout: LayoutField
+  layout_grid: LayoutGridField
 }
 
 const uiSchema = {
-  'ui:field': 'layout',
-  'ui:layout': [
-    {
-      firstName: { md: 6 },
-      lastName: { md: 6 }
-    }, {
-      bio: { md: 12 }
-    }, {
-      age: { md: 6 },
-      password: { md: 6 }
-    }
-  ]
+  'ui:field': 'layout_grid',
+  'ui:layout_grid': { 'ui:row': [
+    { 'ui:col': { md: 12, children: [
+      { 'ui:group': 'Name', 'ui:row': [
+        { 'ui:col': { md: 6, children: ['firstName'] } },
+        { 'ui:col': { md: 6, children: ['lastName'] } },
+      ] },
+      { 'ui:row': [
+        { 'ui:col': { md: 6, children: ['password'] } },
+        { 'ui:col': { md: 6, children: ['age'] } },
+      ] },
+      { 'ui:row': [
+        { 'ui:col': { md: 12, children: ['bio'] } },
+      ] },
+    ] } },
+  ] },
 }
 ```
